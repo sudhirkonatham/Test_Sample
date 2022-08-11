@@ -1,0 +1,14 @@
+{
+  "Environment": "SIT",
+  "SIT": {
+    "username": "testframework120822@gmail.com",
+    "password": "test12345$",
+    "accessToken":"eyJhbGciOiJSUzUxMiIsImN0eSI6IkpXVCIsImlzcyI6IkhFUkUiLCJhaWQiOiJ4MWV5VmtwdGZaYndDN3lLUUtXciIsImlhdCI6MTY2MDEyMzQ1NSwiZXhwIjoxNjYwMjA5ODU1LCJraWQiOiJqMSJ9.ZXlKaGJHY2lPaUprYVhJaUxDSmxibU1pT2lKQk1qVTJRMEpETFVoVE5URXlJbjAuLnB3RmdvdFdZODBkc1RDdXB2Q1FyWUEuY0ZXSTI0MGRtSkptd3I1ekh3YWlQMC1VRGk2azBPc2JhdFM5UGlGdFJBV3RSWlMteGZUOUZoYU9KVklabVJiUWtyeEdXQlF0NlRlamJlUU11R3o1a1RSd2pXd1Y4Qm9aZHQwV0ZHYlViUmxGY3JIRHE0Tkh1V0tIZnhaU1VwdDFBUW4zUEF0bS0zdU4zMXNxSHJfSzYwY1JzUWRad0pBWDhqbjFsZEwtLUNjLmxGUE56d0g2LUttV05Nb3VBVU1WTVpqZ0pfZTV5ejUxblV3RE93cHl1eHc.LFvwsrHpLIZMvW3RsP86YmTExoQswKzCScKo8eM-2fIpNv3Bl4RJ9G2aAFh62dqd6x22rB-XB_wQ37esYfTJLugwVLn48YE37f10xiUa2BmPHlnQHlFfnqkLUzc9PuY9GSXk2sQAu8zahpmFVv3mkd0UydTwm1wA6ikQnTh7Ugbg0gc-98M2u9pv3HYvJfIqGt7_ItlKan1N4wmaNWSmxQDXVsi-L_Fa8gxX9t61aaroQbEE65CepmoGBnmcAlYmYQUSrocpC938W4X1e5U5IOg9VNk7z7uyWR8s1xfV0-YCII52lIZl_O-zdWqV67zHGdzAM3qBo_sTir_yRAgQyg",
+    "AdvancedDatasetsUrl":"https://eu-west-1-fleet.api-gateway.sit.ls.hereapi.com/v8/maps/attributes",
+    "applicationUrl": "https://www.amazon.in/",
+    "browser": "Chrome"
+  },
+  "PROD": {
+    "applicationUrl": "https://www.amazon.in/"
+  }
+}

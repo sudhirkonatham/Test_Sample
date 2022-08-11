@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.2'
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.3.0'
+    testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.2.3'
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '7.0.0'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.0.0'
+    testImplementation  group: 'net.masterthought', name: 'cucumber-reporting', version: '5.6.1'
+    testImplementation 'io.rest-assured:rest-assured:4.2.1'
+    testImplementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+task cucumber(){
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty','--plugin', 'html:target/cucumber-reports.html','--plugin', 'json:target/cucumber.json',
+                    '--glue', 'com.framework.steps', 'src/test/resources/features']
+        }
+    }
+}
